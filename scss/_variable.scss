@@ -1,0 +1,101 @@
+:root {
+  --black: #101010;
+  --white: #fff;
+  --theme: #ff6a16;
+  --theme-2: #ecfff1;
+  --text: #ffffffbf;
+  --dark: #0a0a0a;
+  --dark-2: #ffffff17;
+  --dark-3: #00091d;
+  --dark-4: #1c1919;
+  --dark-5: #202020;
+  --dark-6: #141414;
+  --gray: #7b7b7b;
+  --gray-2: #a7a7a7;
+  --gray-3: #aaaaaa;
+  --gray-4: #797979;
+  --rating: #ffd234;
+  --bg: #eadfce;
+  ---box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+  --box-shadow-white: 0px 0px 60px 0px rgba(255, 255, 255, 0.05);
+}
+
+$black: var(--black);
+$white: var(--white);
+$theme-1: var(--theme);
+$theme-2: var(--theme-2);
+$text-color: var(--text);
+$dark: var(--dark);
+$dark-2: var(--dark-2);
+$dark-3: var(--dark-3);
+$dark-4: var(--dark-4);
+$dark-5: var(--dark-5);
+$dark-6: var(--dark-6);
+$gray: var(--gray);
+$gray-2: var(--gray-2);
+$gray-3: var(--gray-3);
+$gray-4: var(--gray-4);
+$rating: var(--rating);
+$bg: var(--bg);
+$shadow: var(---box-shadow);
+$shadow-white: var(---box-shadow-white);
+
+$colors-list: (
+  transparent: transparent,
+  black: var(--black),
+  white: var(--white),
+  theme-1: var(--theme),
+  theme-2: var(--theme-2),
+  text-color: var(--text),
+  dark: var(--dark),
+  dark-2: var(--dark-2),
+  dark-3: var(--dark-3),
+  dark-4: var(--dark-4),
+  dark-5: var(--dark-5),
+  dark-6: var(--dark-6),
+  gray: var(--gray),
+  gray-2: var(--gray-2),
+  gray-3: var(--gray-3),
+  gray-4: var(--gray-4),
+  rating: var(--rating),
+  bg: var(--bg),
+);
+
+@each $name, $value in $colors-list {
+  .color-#{$name} {
+    color: #{$value};
+  }
+  .#{$name}-bg {
+    background-color: #{$value};
+  }
+  .border-color-#{$name} {
+    border-color: #{$value} !important;
+  }
+  .hover-color-#{$name} {
+    &:hover {
+      color: #{$value};
+    }
+  }
+  .hover-#{$name}-bg {
+    &:hover {
+      background-color: #{$value};
+    }
+  }
+  .hover-border-color-#{$name} {
+    border-color: #{$value};
+  }
+  .btn_moveing_hover.theme-btn-with-bg.hover-color-#{$name}:hover {
+    span {
+      color: #{$value};
+    }
+  }
+  .btn_moveing_hover.theme-btn-with-bg.hover-bg-#{$name} {
+    &:hover {
+      border: 1px solid #{$value};
+    }
+
+    .magnet-bubble {
+      background-color: #{$value};
+    }
+  }
+}

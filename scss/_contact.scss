@@ -1,0 +1,76 @@
+/* --------------------------------------------
+  Contact
+ ---------------------------------------------- */
+.contact-form {
+  input:not([type="checkbox"]),
+  textarea {
+    margin-top: 51px;
+  }
+}
+
+.contact-section-2 {
+  background-image: url(../img/contact-bg.png);
+  padding: 60px 0;
+  background-size: cover;
+}
+
+.content-details-item {
+  background-color: $dark-6;
+  padding: 35px 35px 49px 35px;
+  i {
+    height: 100px;
+    width: 100px;
+    @include flex;
+    background-color: rgbaGenerate($white, 8%);
+    font-size: 43px;
+    color: $theme-1;
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
+  }
+  h4:first-of-type {
+    margin-bottom: 8px;
+  }
+  a:hover {
+    color: $theme-1;
+  }
+  &:hover {
+    i {
+      background-color: $theme-1;
+      color: $white;
+    }
+  }
+}
+
+.contact-map {
+  height: 575px;
+}
+
+.contact-page-form {
+  input,
+  textarea {
+    border: 1px solid rgbaGenerate($white, 12%);
+    padding: 15px 20px;
+  }
+  input {
+    margin-bottom: 20px;
+  }
+  textarea {
+    min-height: 149px;
+    margin-bottom: 30px;
+  }
+  button {
+    font-family: $poppins;
+    font-weight: 500;
+    font-size: 16px;
+    color: $theme-1;
+    border: 1px solid $theme-1;
+    padding: 15px 35px;
+    @include flex;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: $theme-1;
+      color: $white;
+    }
+  }
+}

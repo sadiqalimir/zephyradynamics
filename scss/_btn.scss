@@ -1,0 +1,117 @@
+/* --------------------------------------------
+    Button
+ ---------------------------------------------- */
+
+.btn-1 {
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  padding: 12px 33px;
+  background-color: rgbaGenerate($white, 4%);
+  border-radius: 82px;
+  border: 1px solid rgbaGenerate($white, 22%);
+  line-height: normal;
+  @include flex(center, start);
+  gap: 12px;
+  i {
+    font-weight: 600;
+  }
+  &:hover {
+    background-color: $theme-1;
+    border: 1px solid $theme-1;
+  }
+}
+.btn-2 {
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 5px;
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  &.border-color-theme-1 {
+    &::after {
+      content: "";
+      background-color: $theme-1;
+    }
+  }
+  i {
+    font-size: 12px;
+  }
+  &:hover {
+    &::after {
+      content: "";
+      width: 0;
+    }
+  }
+}
+
+.btn-3 {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 1px solid $theme-1;
+  color: $theme-1;
+  @include flex(center, center);
+  &:hover {
+    background-color: $theme-1;
+    color: $white;
+  }
+  @include breakpoint(max-lg) {
+    width: 130px;
+    height: 130px;
+  }
+  &.faq-page-btn-3 {
+    width: 126px;
+    height: 126px;
+  }
+}
+
+.btn-5 {
+  @extend .btn-1;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 8px 30px;
+  background-color: rgbaGenerate($white, 10%);
+  border: 1px solid rgbaGenerate($white, 9%);
+}
+
+.video-play {
+  a {
+    width: 148px;
+    height: 148px;
+    background-color: $white;
+    color: $dark;
+    border-radius: 50%;
+    @include flex(center, center);
+    &:hover {
+      background-color: $theme-1;
+      color: $white;
+    }
+  }
+}
+
+.contact-form-btn {
+  font-family: $poppins;
+  font-weight: 500;
+  font-size: 16px;
+  color: $theme-1;
+  border: 1px solid $theme-1;
+  padding: 15px 35px;
+  @include flex;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: $theme-1;
+    color: $white;
+  }
+}

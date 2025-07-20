@@ -1,0 +1,179 @@
+/* --------------------------------------------
+    Banner
+ ---------------------------------------------- */
+
+.banner-1 {
+  background-image: url(../img/banner-1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 266px;
+  padding-bottom: 216px;
+  position: relative;
+  background-position: bottom;
+  h1 {
+    font-family: $inter_tight;
+    font-size: 200px;
+    font-weight: 800;
+    line-height: 210px;
+    @include breakpoint(max-lg) {
+      font-size: 150px;
+      line-height: 160px;
+    }
+    @include breakpoint(max-md) {
+      font-size: 110px;
+      line-height: 120px;
+    }
+    @include breakpoint(max-xxsmall) {
+      font-size: clamp(40px, 14.8vw, 80px);
+      line-height: 1.1;
+    }
+  }
+  h2 {
+    font-family: $inter_tight;
+    font-size: 66px;
+    font-weight: 500;
+    line-height: 76px;
+    @include breakpoint(max-sm) {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+  .banner-1-icon {
+    width: 130px;
+    height: 131px;
+    margin-right: 59px;
+    @include breakpoint(max-md) {
+      width: 80px;
+      height: 80px;
+      margin-right: 20px;
+    }
+    @include breakpoint(max-sm) {
+      display: none;
+    }
+  }
+  @include breakpoint(max-lg) {
+    .banner-1-play {
+      position: absolute;
+      top: 230px;
+    }
+  }
+  @include breakpoint(max-md) {
+    .banner-1-play {
+      display: none;
+    }
+  }
+  .banner-1-play {
+    position: relative;
+    width: 174px;
+    height: 173px;
+    border-radius: 50%;
+    overflow: hidden;
+    @include flex();
+    background-image: url(../img/banner-1-play-bg.png);
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 174px !important;
+      height: 173px !important;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      display: none;
+    }
+    a {
+      font-weight: 600;
+      line-height: 28px;
+      color: $white;
+      background: none !important;
+    }
+    @include breakpoint(max-sm) {
+      display: none;
+    }
+  }
+  .banner-1-footer {
+    margin-top: 60px;
+    padding-top: 60px;
+    border-top: 1px solid rgbaGenerate($white, 51%);
+    p {
+      color: rgbaGenerate($white, 75%);
+    }
+  }
+}
+.banner-5 {
+  padding-top: 246px;
+  h1 {
+    position: relative;
+    z-index: 2;
+    font-family: $poppins;
+    font-size: 175px;
+    font-weight: 800;
+    line-height: 185px;
+    span {
+      color: transparent;
+      -webkit-text-stroke: 2px $white !important;
+    }
+    img {
+      width: 130px;
+      height: 131px;
+      margin-top: -15px;
+    }
+    @include breakpoint(max-xxl) {
+      font-size: 150px;
+      line-height: 160px;
+    }
+    @include breakpoint(max-xl) {
+      font-size: 120px;
+      line-height: 130px;
+    }
+    @include breakpoint(max-md) {
+      img {
+        display: none;
+      }
+    }
+    @include breakpoint(max-sm) {
+      font-size: clamp(40px, 14.8vw, 80px);
+      line-height: 1.1;
+    }
+  }
+  .banner-5-content {
+    margin-top: -90px;
+    position: relative;
+    &-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: $dark;
+      padding-left: 121px;
+      padding-bottom: 65px;
+      z-index: 3;
+      @include breakpoint(max-xl) {
+        padding-left: 21px;
+        padding-bottom: 21px;
+      }
+    }
+    .video-bg-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .video-play {
+        a {
+          background-color: $theme-1;
+          color: $white;
+        }
+      }
+    }
+    @include breakpoint(max-xl) {
+      margin-top: -50px;
+    }
+    @include breakpoint(max-md) {
+      margin-top: 50px;
+      height: 400px;
+      img {
+        height: 400px;
+        object-fit: cover;
+      }
+    }
+  }
+}

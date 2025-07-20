@@ -1,0 +1,86 @@
+/* --------------------------------------------
+  Testimonial
+ ---------------------------------------------- */
+.testimonial-bottom {
+  margin-top: 42px;
+  ul {
+    position: relative;
+    @include flex(center, start);
+    gap: 13px;
+    flex-wrap: wrap;
+    &::before {
+      content: "";
+      width: 38px;
+      height: 1px;
+      background: rgbaGenerate($white, 30%);
+    }
+    li:first-child {
+      margin-left: 0;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 32px;
+      font-family: $poppins;
+      color: $white;
+    }
+    li:last-child {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 28px;
+    }
+  }
+}
+.testimonial-images {
+  @include flex(center, start);
+  gap: 10px;
+  img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.testimonial-pagination.swiper-scrollbar-horizontal {
+  width: 100%;
+  background-color: rgbaGenerate($white, 12%);
+  height: 2px;
+  .swiper-scrollbar-drag {
+    background-color: $theme-1;
+  }
+}
+.testimonial-next,
+.testimonial-prev {
+  font-size: 16px;
+  i {
+    color: $gray;
+    &:hover {
+      color: $theme-1;
+    }
+  }
+}
+
+.testimonial-slider-bottom {
+  @include flex(center, space-between);
+  gap: 100px;
+  .testimonial-pagination-container {
+    width: 100%;
+  }
+  @include breakpoint(max-lg) {
+    display: none;
+  }
+}
+
+.testimonial-5-item {
+  background-color: $dark-6;
+  padding: 45px;
+  i {
+    font-size: 54px;
+  }
+  & > p {
+    margin-top: 43px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+  }
+}

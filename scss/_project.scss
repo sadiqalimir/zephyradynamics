@@ -1,0 +1,140 @@
+/* --------------------------------------------
+  Projects
+ ---------------------------------------------- */
+
+.project-content-container {
+  position: relative;
+  &.project-content-container-1 {
+    height: 100%;
+    @include breakpoint(max-xxsmall) {
+      height: unset;
+    }
+  }
+  .project-centent {
+    background-color: $theme-1;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    padding: 30px;
+    @include breakpoint(max-xxl) {
+      bottom: 0;
+    }
+    @include breakpoint(max-xxsmall) {
+      position: unset;
+    }
+    h4 {
+      a {
+        color: $white;
+        font-size: 32px;
+        font-weight: 700;
+        @include flex(center, start);
+        gap: 30px;
+        border-bottom: 1px solid rgbaGenerate($white, 11%);
+        padding-bottom: 13px;
+        margin-bottom: 5px;
+        i {
+          color: $white;
+        }
+        @include breakpoint(max-xxl) {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  &.project-content-bg-white {
+    .project-centent {
+      background-color: $white;
+      p {
+        color: $theme-1;
+      }
+      a {
+        border-bottom: 1px solid rgbaGenerate($dark, 11%);
+        color: $dark;
+        &:hover {
+          color: $theme-1;
+          i {
+            color: $theme-1;
+          }
+        }
+      }
+      i {
+        color: $dark;
+        transition: all 0.4s ease-in-out;
+      }
+    }
+  }
+}
+
+.project-5-items {
+  margin-top: 97px;
+  .project-5-item {
+    @include flex(center, space-between);
+    padding: 50px 0;
+    border-bottom: 1px solid rgbaGenerate($white, 12%);
+    position: relative;
+    img {
+      position: absolute;
+      top: -50%;
+      right: 60px;
+      opacity: 0;
+      z-index: 2;
+      transition: all 0.4s ease-in-out;
+    }
+    h4 {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 44px;
+      display: flex;
+      gap: 20px;
+      transition: all 0.4s ease-in-out;
+      @include breakpoint(max-md) {
+        font-size: clamp(20px, 7vw, 28px);
+        line-height: 1.4;
+      }
+      span {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 32px;
+        color: $theme-1;
+      }
+    }
+    i {
+      font-size: 23px;
+    }
+    &:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
+    &:first-child {
+      padding-top: 0;
+    }
+    &:hover {
+      h4 {
+        color: $theme-1;
+      }
+      img {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.project-details-sidebar {
+  ul {
+    li {
+      @include flex(center, start);
+      border-bottom: 1px solid rgbaGenerate($white, 12%);
+      padding: 20px 0;
+      font-family: $poppins;
+      strong {
+        width: 108px;
+        color: rgbaGenerate($white, 75%);
+        display: inline-block;
+      }
+      &:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}

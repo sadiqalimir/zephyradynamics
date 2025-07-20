@@ -1,0 +1,35 @@
+/* --------------------------------------------
+    About
+ ---------------------------------------------- */
+.about-counter-container {
+  @include flex(center, flex-end);
+  gap: 90px;
+  @include breakpoint(max-xxl) {
+    flex-wrap: wrap;
+  }
+  @include breakpoint(max-lg) {
+    justify-content: space-between;
+  }
+}
+
+.about-5-text {
+  background-color: $dark-6;
+  padding: 30px;
+  max-width: 521px;
+  color: rgbaGenerate($white, 75%);
+  position: absolute;
+  bottom: 50px;
+  @include breakpoint(max-xxl) {
+    position: unset;
+  }
+  @include breakpoint(max-lg) {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+}
+
+.about-icon {
+  @include breakpoint(max-xxl) {
+    width: 100%;
+  }
+}

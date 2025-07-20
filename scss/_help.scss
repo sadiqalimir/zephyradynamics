@@ -1,0 +1,144 @@
+/* --------------------------------------------
+    Helper
+ ---------------------------------------------- */
+br {
+  @include breakpoint(max-lg) {
+    display: none;
+  }
+}
+
+.linear-bg-1 {
+  background: linear-gradient(
+    -360deg,
+    rgba(44, 45, 71, 0) 0%,
+    rgba(236, 255, 241, 1) 100%
+  );
+}
+
+.fill-transparent {
+  fill: transparent;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 2px rgbaGenerate($white, 69%);
+  color: transparent;
+}
+
+%sub-title {
+  font-family: $poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  display: inline-block;
+}
+
+.sub-title {
+  @extend %sub-title;
+  padding: 8px 30px;
+  background-color: rgbaGenerate($white, 10%);
+  border-radius: 27px;
+  border: 1px solid rgbaGenerate($white, 9%);
+}
+
+.section-title {
+  color: $gray !important ;
+  font-family: $inter_tight;
+  font-size: 66px;
+  font-weight: 400;
+  line-height: 84px;
+  margin-top: 30px;
+  span {
+    color: $white;
+  }
+  @include breakpoint(max-xxl) {
+    font-size: 55px;
+    line-height: 70px;
+  }
+  @include breakpoint(max-md) {
+    font-size: clamp(20px, 10vw, 45px);
+    line-height: 1.4;
+  }
+}
+
+.bg-blur {
+  background-color: $theme-1;
+  height: 200px;
+  width: 200px;
+  filter: blur(100px);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: -1;
+}
+.bg-blur-2 {
+  background-color: $theme-2;
+  height: 387px;
+  width: 396px;
+  filter: blur(100px);
+  position: absolute;
+  bottom: -100px;
+  left: 45%;
+  transform: translate(-50%, 0%);
+  z-index: -1;
+}
+
+form {
+  input,
+  textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    resize: none;
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgbaGenerate($dark-2, 25%);
+    border-radius: 0;
+    font-family: $poppins;
+    color: $text-color;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    color: inherit;
+  }
+  input[type="checkbox"] {
+    &.color-white {
+      background-color: transparent;
+      border: 1px solid rgbaGenerate($white, 75%);
+      &:checked {
+        background-color: $white;
+      }
+    }
+    width: 18px;
+    height: 18px;
+    background-color: $white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid rgbaGenerate($dark-2, 25%);
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    &:checked {
+      background-color: $dark;
+    }
+  }
+  label {
+    font-family: $poppins;
+    font-size: 14px;
+    line-height: 24px;
+    color: #8d8d8d;
+  }
+}
+
+.img-object-cover {
+  object-fit: cover;
+}
+
+.list-style-dot {
+  list-style: disc;
+  padding-left: 20px;
+}
